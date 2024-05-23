@@ -41,5 +41,3 @@ class Solution {
         
     }
 }
-
-// ex) 반례 [[{}]{}]
