@@ -18,14 +18,12 @@ class Solution {
                     (last.equals("[") && sArr[i].equals("]"))) {
                     
                     sList.remove(sList.size()-1);
-                    continue;
                     
                 } else if (sArr[i].equals("(") ||
                            sArr[i].equals("{") ||
                            sArr[i].equals("[")) {
                     
                     sList.add(sArr[i]);
-                    continue;
                     
                 } else {
                     
@@ -37,7 +35,7 @@ class Solution {
             }
         }
         
-        return sList.isEmpty() ? true : false;
+        return sList.isEmpty();
         
     }
 }
