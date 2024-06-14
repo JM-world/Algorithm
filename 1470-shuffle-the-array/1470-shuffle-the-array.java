@@ -8,11 +8,10 @@ class Solution {
         for (int i = 0; i < nums.length; i ++) {
             if (cnt % 2 == 0) {
                 arr[i] = nums[x];
-                x ++;
             }
             else {
-                arr[i] = nums[n];
-                n++;
+                arr[i] = nums[x + n];
+                x++;
             }
             cnt++;
         }
