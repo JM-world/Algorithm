@@ -1,19 +1,16 @@
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int i = 0;
         int sum = 0;
-        if (ruleKey.equals("type")) {
-            for (List<String> item : items) {
-                if (ruleValue.equals(item.get(0))) sum++;
-            }
-        } else if (ruleKey.equals("color")) {
-            for (List<String> item : items) {
-                if (ruleValue.equals(item.get(1))) sum++;
-            }
-        } else {
-            for (List<String> item : items) {
-                if (ruleValue.equals(item.get(2))) sum++;
-            }
+        switch (ruleKey) {
+            case "color" -> i = 1;
+            case "name" -> i = 2;
         }
+        
+        for (List<String> item : items) {
+            if (ruleValue.equals(item.get(i))) sum++;
+        }
+        
         return sum;
     }
 }
